@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import "./ExpenseList.css";
 import ExpenseItem from "./ExpenseItem";
 import Card from "../UI/Card";
-
+import ExpenseFilter from './ExpenseFilter';
 import Modal from "../Modal/Modal";
 
 function ExpenseList(props) {
@@ -10,6 +10,7 @@ function ExpenseList(props) {
 
   return (
     <Card className="expenses">
+    <ExpenseFilter />
       <ExpenseItem
         title={props.expense[0].title}
         amount={props.expense[0].amount}
