@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import "./ExpenseList.css";
 import ExpenseItem from "./ExpenseItem";
 import Card from "../UI/Card";
-import ExpenseFilter from './ExpenseFilter';
+import ExpenseFilter from "./ExpenseFilter";
 import Modal from "../Modal/Modal";
 
 function ExpenseList(props) {
@@ -10,7 +10,7 @@ function ExpenseList(props) {
 
   return (
     <Card className="expenses">
-    <ExpenseFilter />
+      <ExpenseFilter />
       <ExpenseItem
         title={props.expense[0].title}
         amount={props.expense[0].amount}
@@ -32,7 +32,7 @@ function ExpenseList(props) {
         date={props.expense[3].date}
       />
       <button onClick={() => setShow(true)}>Show modal</button>
-      <Modal onClose={() => setShow(false)} show={show}/>
+      <Modal onClose={() => setShow(false)} show={show} />
     </Card>
   );
 }
